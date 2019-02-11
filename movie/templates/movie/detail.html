@@ -1,0 +1,14 @@
+{% extends 'movie/base.html' %}
+{% block bb %}
+    <h1>{{movie.title}}</h1>
+    <h1>{{movie.title_en}}</h1>
+    <h1>{{movie.audience}}</h1>
+    <h1>{{movie.open_date}}</h1>
+    <h1>{{movie.genre}}</h1>
+    <h1>{{movie.watch_grade}}</h1>
+    <h1>{{movie.score}}</h1>
+    <h1>{{movie.poster_url}}</h1>
+    <h1>{{movie.description}}</h1>
+    <a href="{% url 'movies:form_update' movie.id%}">폼으로수정하기</a>
+    <a href="{% url 'movies:model_form_update' movie.id%}">모델 폼으로수정하기</a>
+{% endblock %}
